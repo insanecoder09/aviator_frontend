@@ -26,7 +26,7 @@ const Context = (props) => {
 
   const nextRound = () => {
     axios.get(`https://aviator-backend-1.onrender.com/newPrediction/${key}`).then((res) => {
-      setRoundValue('Its');
+      setRoundValue('Loading...');
       setTimeout(() => {
         setRoundValue(res.data);
       }, 1000);
