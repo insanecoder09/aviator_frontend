@@ -21,12 +21,12 @@ function Prediction() {
       <h1 className="w-full pl-5">SELECT APP</h1>
       <div className="flex flex-col gap-5">
         <div className="flex justify-center gap-5">
-          <img onClick={()=>setUpper(1)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${upper==1? 'border-[3px]':''}`} src="src\Components\3.png" alt="photo" />
-          <img onClick={()=>setUpper(2)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${upper==2? 'border-[3px]':''}`} src="src\Components\4.png" alt="photo" />
+          <img onClick={()=>setUpper(1)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${upper==1? 'border-[3px]':''}`} src="https://i.postimg.cc/ncHxS2S9/3.png" alt="photo" />
+          <img onClick={()=>setUpper(2)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${upper==2? 'border-[3px]':''}`} src="https://i.postimg.cc/3rj7ZV1H/4.png" alt="photo" />
         </div>
         <div className="flex justify-center gap-5">
-          <img onClick={()=>setLower(1)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${lower==1? 'border-[3px]':''}`} src="src\Components\2.png" alt="photo" />
-          <img onClick={()=>setLower(2)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${lower==2? 'border-[3px]':''}`} src="src\Components\1.png" alt="photo" />
+          <img onClick={()=>setLower(1)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${lower==1? 'border-[3px]':''}`} src="https://i.postimg.cc/PJMjrvJq/2.png" alt="photo" />
+          <img onClick={()=>setLower(2)} className={`h-[110px] w-[110px] rounded-xl border-sky-400 ${lower==2? 'border-[3px]':''}`} src="https://i.postimg.cc/hjTn65qT/1.png" alt="photo" />
         </div>
       </div>
       <div className="w-[70%]">
