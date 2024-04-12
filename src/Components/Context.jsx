@@ -12,7 +12,7 @@ const Context = (props) => {
   // 9 - Check Key.
 
   const CheckKey = () => {
-    axios.get(`https://aviator-backend-1.onrender.com/keyCheck/${key}`).then((res) => {
+    axios.get(`http://localhost:3000/keyCheck/${key}`).then((res) => {
       if (res.data.resCode == 3) {
         const verify = localStorage.getItem("keyToCheck");
         if (verify) setState(res.data.resCode);
@@ -25,9 +25,11 @@ const Context = (props) => {
   };
 
   const nextRound = () => {
-    axios.get(`https://aviator-backend-1.onrender.com/newPrediction/${key}`).then((res) => {
-      console.log(res.data);
-      setRoundValue(res.data);
+    axios.get(`http://localhost:3000/newPrediction/${key}`).then((res) => {
+      setRoundValue('Its');
+      setTimeout(() => {
+        setRoundValue(res.data);
+      }, 1000);
     });
   };
 

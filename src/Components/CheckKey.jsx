@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "./Context";
 import { useNavigate } from "react-router-dom";
 
@@ -6,6 +6,8 @@ function CheckKey() {
   const navigate = useNavigate();
   const { setKey, key, CheckKey, setUsername, username } =
     useContext(MyContext);
+
+    const [btn, setBtn] = useState(1)
 
   return (
     <div className="p-2 bg-black h-full flex flex-col items-center justify-around">
@@ -30,12 +32,15 @@ function CheckKey() {
         />
         <button
           onClick={() => {
-            if (key && username) CheckKey();
+            if (key && username) {
+              CheckKey();
+              setBtn(0)
+            }
             else alert("Please fill all details.");
           }}
-          className="bg-transparent p-3 bg-white text-black font-bold"
+          className={`p-3 ${btn?'bg-white text-black':'bg-zinc-500 text-zinc-400'} font-bold`}
         >
-          Login
+          {btn?'Login':'Please Wait'}
         </button>
       </div>
 
